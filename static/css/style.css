@@ -1,0 +1,76 @@
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Rubik", sans-serif;
+}
+
+h1 {
+	font-size: 400%;
+	margin-bottom: 0;
+}
+
+input {
+	margin: 10px;
+	height: 30px;
+}
+
+.btn-container {
+	margin-bottom: 1em;
+	display: flex;
+	position: relative;
+	width: 40%;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	display: inline-block;
+	padding: 0.3em 1.2em;
+	margin: 0 0.1em 0.1em 0;
+	border: 0.25em solid rgba(255, 255, 255, 0);
+	border-radius: 2em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1em;
+	text-align: center;
+	transition: all 0.2s;
+	width: 100%;
+	margin: 5px;
+}
+button:hover {
+	border-color: black;
+}
+button:focus {
+	outline: none;
+}
+@media all and (max-width: 30em) {
+	button {
+		display: block;
+		margin: 0.2em auto;
+	}
+}
+
+#maze {
+	position: relative;
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-auto-columns: 1fr;
+	border: solid black 3px;
+	max-height: 80vh;
+	max-width: 95vw;
+}
+
+.maze-tile {
+	background-color: #cae9ff;
+	border: solid black 1px;
+}
+
+.swal2-container {
+	font-family: "Rubik", sans-serif;
+}
+
+.path {
+    background-color: #a5d6a7;
+}

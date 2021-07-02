@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8" />
+		<title>MegaMaze</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta property="og:title" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+
+		<link rel="apple-touch-icon" href="icon.png" />
+		<!-- Place favicon.ico in the root directory -->
+		<!-- 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css"> -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+
+		<meta name="theme-color" content="#fafafa" />
+	</head>
+
+	<body>
+		<!-- Add your site or application content here -->
+		<div class="container">
+			<h1>MegaMaze</h1>
+			<p>Leave seed blank for a random maze.</p>
+			<div class="input-container">
+				Height
+				<input
+					type="number"
+					id="height-input"
+					min="0"
+					max="100"
+					value="10"
+				/>
+				Width
+				<input
+					type="number"
+					id="width-input"
+					min="0"
+					max="100"
+					value="10"
+				/>
+				Seed <input type="number" id="seed-input" min="0" max="32768" />
+			</div>
+			<div class="btn-container">
+				<button onclick="generateMaze()" style="background-color: #c8b6ff">
+					Generate
+				</button>
+				<button onclick="solveMaze()" style="background-color: #4ad66d">
+					Solve
+				</button>
+				<button onclick="reset()" style="background-color: #f38375">
+					Reset
+				</button>
+			</div>
+			<div id="maze"></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
