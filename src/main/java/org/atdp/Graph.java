@@ -22,6 +22,11 @@ public class Graph {
      */
     public Graph(int numVertices) {
         // YOUR CODE HERE
+        vertices = new ArrayList<>(numVertices);
+        for(int i =0; i < numVertices;i++){
+            Vertex newVertex = new Vertex(i);
+            vertices.add(newVertex);
+        }
     }
 
     /**
@@ -32,6 +37,14 @@ public class Graph {
      */
     public void addEdge(int u, int v) {
         // YOUR CODE HERE
+        if(u==v){
+            return;
+        }
+        Vertex temp1 = vertices.get(u);
+        Vertex temp2 = vertices.get(v);
+
+        temp1.edges.add(temp2);
+        temp2.edges.add(temp1);
     }
 
     /**
@@ -40,8 +53,11 @@ public class Graph {
      */
     public Vertex getVertex(int id) {
         // YOUR CODE HERE
-        return null;
-    }
+        if (id > vertices.size() || id < 0) {
+            return null;
+        }
+        return vertices.get(id);
+    
 }
 
 
